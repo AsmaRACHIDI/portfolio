@@ -13,7 +13,10 @@ export const profile = {
     {
       name: 'Machine Learning',
       color: 'blue',
-      skills: ['Machine Learning', 'Clustering', 'Scikit-learn', 'Feature Engineering'],
+      skills: [
+        'Machine Learning', 'Clustering', 'Scikit-learn', 'Feature Engineering',
+        'Grid Search / Cross-Validation',
+      ],
     },
     {
       name: 'Deep Learning & Vision',
@@ -28,21 +31,24 @@ export const profile = {
       color: 'sky',
       skills: [
         'NLP', 'LLM', 'RAG', 'BERT & CamemBERT', 'Hugging Face',
-        'LangChain', 'Mistral', 'Llama', 'ChromaDB',
+        'LangChain', 'Mistral', 'Llama', 'ChromaDB', 'Prompt Engineering',
       ],
     },
     {
       name: 'Data & analyse',
       color: 'cyan',
       skills: [
-        'Python', 'SQL', 'EDA', 'PostgreSQL', 'MySQL',
-        'Web Scraping', 'Matplotlib / Seaborn',
+        'Python', 'Pandas / NumPy', 'SQL', 'EDA', 'PostgreSQL', 'MySQL',
+        'Web Scraping', 'Matplotlib / Seaborn', 'Jupyter', 'OpenDataSoft',
       ],
     },
     {
       name: 'Outils & cloud',
       color: 'teal',
-      skills: ['Docker', 'Azure', 'Dash / Plotly', 'Flask', 'GitHub', 'pytest'],
+      skills: [
+        'Docker', 'Azure', 'Dash / Plotly', 'Flask', 'Streamlit', 'FastAPI',
+        'GitHub', 'pytest',
+      ],
     },
   ],
 }
