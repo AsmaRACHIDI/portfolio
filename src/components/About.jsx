@@ -1,7 +1,15 @@
 import { motion } from 'framer-motion'
+import { Landmark, HeartPulse, BrainCircuit, Cloud } from 'lucide-react'
 import { profile } from '../data/profile'
 import Container from './Container'
 import SectionHeading from './SectionHeading'
+
+const iconMap = {
+  Landmark,
+  HeartPulse,
+  BrainCircuit,
+  Cloud,
+}
 
 export default function About() {
   return (
@@ -29,17 +37,22 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 gap-4 lg:col-span-2"
+            className="divide-y divide-zinc-100 overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-sm lg:col-span-2"
           >
-            {profile.stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-2xl border border-zinc-100 bg-white p-5 text-center shadow-sm transition-shadow hover:shadow-md"
-              >
-                <div className="text-gradient text-2xl font-bold">{stat.value}</div>
-                <div className="mt-1 text-sm text-zinc-500">{stat.label}</div>
-              </div>
-            ))}
+            {profile.highlights.map((item) => {
+              const Icon = iconMap[item.icon]
+              return (
+                <div key={item.title} className="flex items-center gap-4 p-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-pink-500 text-white">
+                    <Icon size={20} />
+                  </span>
+                  <div className="text-left">
+                    <div className="font-semibold text-zinc-900">{item.title}</div>
+                    <div className="text-sm text-zinc-500">{item.subtitle}</div>
+                  </div>
+                </div>
+              )
+            })}
           </motion.div>
         </div>
       </Container>
