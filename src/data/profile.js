@@ -18,29 +18,45 @@ export const profile = {
       { id: 'data', name: 'Data & analyse', color: 'cyan' },
       { id: 'tools', name: 'Outils & cloud', color: 'teal' },
     ],
-    // L'ordre dessine la silhouette du nuage : petits mots aux bords,
-    // gros mots au centre (rendu centré dans About.jsx).
-    words: [
-      { label: 'Keras', group: 'dl', size: 1 },
-      { label: 'RAG', group: 'nlp', size: 2 },
-      { label: 'Streamlit', group: 'tools', size: 1 },
-      { label: 'Clustering', group: 'ml', size: 1 },
-      { label: 'PyTorch', group: 'dl', size: 2 },
-      { label: 'SQL', group: 'data', size: 2 },
-      { label: 'BERT & CamemBERT', group: 'nlp', size: 2 },
-      { label: 'Machine Learning', group: 'ml', size: 3 },
-      { label: 'NLP', group: 'nlp', size: 3 },
-      { label: 'Python', group: 'data', size: 3 },
-      { label: 'Deep Learning', group: 'dl', size: 3 },
-      { label: 'Computer Vision', group: 'dl', size: 2 },
-      { label: 'Docker', group: 'tools', size: 2 },
-      { label: 'LLM', group: 'nlp', size: 2 },
-      { label: 'Scikit-learn', group: 'ml', size: 2 },
-      { label: 'Pandas / NumPy', group: 'data', size: 1 },
-      { label: 'Hugging Face', group: 'nlp', size: 1 },
-      { label: 'LangChain', group: 'nlp', size: 1 },
-      { label: 'Azure', group: 'tools', size: 1 },
-      { label: 'Dash / Plotly', group: 'tools', size: 1 },
+    // Chaque ligne est rendue centrée : les largeurs croissent puis
+    // décroissent pour dessiner une silhouette d'ellipse (forme de nuage).
+    rows: [
+      [
+        { label: 'Streamlit', group: 'tools', size: 1 },
+        { label: 'Keras', group: 'dl', size: 1 },
+      ],
+      [
+        { label: 'RAG', group: 'nlp', size: 2 },
+        { label: 'PyTorch', group: 'dl', size: 2 },
+        { label: 'SQL', group: 'data', size: 2 },
+      ],
+      [
+        { label: 'BERT & CamemBERT', group: 'nlp', size: 2 },
+        { label: 'Machine Learning', group: 'ml', size: 3 },
+      ],
+      [
+        { label: 'NLP', group: 'nlp', size: 3 },
+        { label: 'Python', group: 'data', size: 3 },
+        { label: 'Deep Learning', group: 'dl', size: 3 },
+      ],
+      [
+        { label: 'Computer Vision', group: 'dl', size: 2 },
+        { label: 'LLM', group: 'nlp', size: 2 },
+        { label: 'Docker', group: 'tools', size: 2 },
+      ],
+      [
+        { label: 'Scikit-learn', group: 'ml', size: 2 },
+        { label: 'Hugging Face', group: 'nlp', size: 1 },
+        { label: 'Pandas / NumPy', group: 'data', size: 1 },
+      ],
+      [
+        { label: 'Azure', group: 'tools', size: 1 },
+        { label: 'Clustering', group: 'ml', size: 1 },
+        { label: 'Dash / Plotly', group: 'tools', size: 1 },
+      ],
+      [
+        { label: 'LangChain', group: 'nlp', size: 1 },
+      ],
     ],
   },
 }

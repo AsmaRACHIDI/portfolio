@@ -28,8 +28,9 @@ const sizeStyles = {
 }
 
 export default function About() {
-  const { groups, words } = profile.skillCloud
+  const { groups, rows } = profile.skillCloud
   const colorOf = (groupId) => groups.find((g) => g.id === groupId).color
+  let wordIndex = 0
 
   return (
     <section id="about" className="border-t border-zinc-100 py-20">
@@ -39,16 +40,23 @@ export default function About() {
           <p className="text-lg leading-relaxed text-zinc-600">{profile.bio}</p>
 
           <div className="text-center">
-            <div className="mx-auto flex max-w-lg flex-wrap items-baseline justify-center gap-x-4 gap-y-1.5">
-              {words.map((word, i) => (
-                <span
-                  key={word.label}
-                  className={`inline-block ${sizeStyles[word.size]} ${textStyles[colorOf(word.group)]} ${
-                    word.size === 1 ? (i % 2 === 0 ? '-rotate-3' : 'rotate-3') : ''
-                  } transition-opacity hover:opacity-60`}
-                >
-                  {word.label}
-                </span>
+            <div className="mx-auto max-w-lg space-y-0.5">
+              {rows.map((row, r) => (
+                <div key={r} className="flex flex-wrap items-baseline justify-center gap-x-4">
+                  {row.map((word) => {
+                    const i = wordIndex++
+                    return (
+                      <span
+                        key={word.label}
+                        className={`inline-block ${sizeStyles[word.size]} ${textStyles[colorOf(word.group)]} ${
+                          word.size === 1 ? (i % 2 === 0 ? '-rotate-3' : 'rotate-3') : ''
+                        } transition-opacity hover:opacity-60`}
+                      >
+                        {word.label}
+                      </span>
+                    )
+                  })}
+                </div>
               ))}
             </div>
 
