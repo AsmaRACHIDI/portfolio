@@ -2,11 +2,18 @@ import { Mail, ArrowRight } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from './BrandIcons'
 import { profile } from '../data/profile'
 import Container from './Container'
+import neuralBg from '../assets/neural-bg.svg'
 
 export default function Hero() {
   return (
-    <section id="top" className="bg-navy pb-24 pt-36 text-white">
-      <Container>
+    <section id="top" className="relative overflow-hidden bg-navy pb-24 pt-36 text-white">
+      <img
+        src={neuralBg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+      />
+      <Container className="relative">
         <div className="max-w-3xl">
           <p className="mb-4 flex items-center gap-2 text-sm text-slate-300">
             <span className="h-2 w-2 rounded-full bg-emerald-400" />

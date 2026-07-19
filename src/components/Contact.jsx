@@ -3,6 +3,7 @@ import { Mail, Copy, Check } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from './BrandIcons'
 import { profile } from '../data/profile'
 import Container from './Container'
+import neuralBg from '../assets/neural-bg.svg'
 
 const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}&su=${encodeURIComponent(
   'Prise de contact depuis votre portfolio'
@@ -22,11 +23,17 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="border-t border-zinc-100 py-20">
-      <Container>
+    <section id="contact" className="relative overflow-hidden bg-navy py-20 text-white">
+      <img
+        src={neuralBg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+      />
+      <Container className="relative">
         <div className="max-w-2xl">
-          <h2 className="text-2xl font-bold text-navy sm:text-3xl">Contact</h2>
-          <p className="mt-3 text-lg text-zinc-600">
+          <h2 className="text-2xl font-bold sm:text-3xl">Contact</h2>
+          <p className="mt-3 text-lg text-slate-300">
             Ouverte aux opportunités en Data Science, Machine Learning et NLP.
             N'hésitez pas à me contacter, je réponds rapidement.
           </p>
@@ -43,9 +50,9 @@ export default function Contact() {
             </a>
             <button
               onClick={copyEmail}
-              className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 px-5 py-2.5 font-medium text-zinc-700 hover:border-zinc-400"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-5 py-2.5 font-medium text-white hover:border-white/60"
             >
-              {copied ? <Check size={16} className="text-emerald-600" /> : <Copy size={16} />}
+              {copied ? <Check size={16} className="text-emerald-400" /> : <Copy size={16} />}
               {copied ? 'Email copié !' : profile.email}
             </button>
           </div>
@@ -56,7 +63,7 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
-              className="text-zinc-500 hover:text-zinc-900"
+              className="text-slate-300 hover:text-white"
             >
               <GithubIcon size={20} />
             </a>
@@ -65,7 +72,7 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className="text-zinc-500 hover:text-zinc-900"
+              className="text-slate-300 hover:text-white"
             >
               <LinkedinIcon size={20} />
             </a>
