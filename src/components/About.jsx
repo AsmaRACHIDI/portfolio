@@ -38,19 +38,21 @@ export default function About() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <p className="text-lg leading-relaxed text-zinc-600">{profile.bio}</p>
 
-          <div>
-            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1.5">
-              {words.map((word) => (
+          <div className="text-center">
+            <div className="mx-auto flex max-w-lg flex-wrap items-baseline justify-center gap-x-4 gap-y-1.5">
+              {words.map((word, i) => (
                 <span
                   key={word.label}
-                  className={`${sizeStyles[word.size]} ${textStyles[colorOf(word.group)]} transition-opacity hover:opacity-60`}
+                  className={`inline-block ${sizeStyles[word.size]} ${textStyles[colorOf(word.group)]} ${
+                    word.size === 1 ? (i % 2 === 0 ? '-rotate-3' : 'rotate-3') : ''
+                  } transition-opacity hover:opacity-60`}
                 >
                   {word.label}
                 </span>
               ))}
             </div>
 
-            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1.5">
+            <div className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-1.5">
               {groups.map((group) => (
                 <span key={group.id} className="flex items-center gap-1.5 text-xs text-zinc-500">
                   <span className={`h-2 w-2 rounded-full ${dotStyles[group.color]}`} />

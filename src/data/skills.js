@@ -35,7 +35,7 @@ export const skillCategories = [
     title: 'Programmation & Bases de données',
     skills: [
       'Python (NumPy, Pandas, Scikit-learn)', 'Jupyter', 'SQL avancé', 'MySQL',
-      'PostgreSQL', 'SQLite', 'C', 'VHDL', 'MATLAB',
+      'PostgreSQL', 'SQLite', 'HTML / CSS', 'Bootstrap', 'C', 'VHDL', 'MATLAB',
     ],
   },
   {
