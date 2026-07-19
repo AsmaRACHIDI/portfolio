@@ -1,23 +1,23 @@
 export const skillCategories = [
   {
     title: 'Machine Learning & Deep Learning',
-    color: 'violet',
     skills: [
       'Classification', 'Régression', 'Clustering', 'Réduction de dimension',
-      'Optimisation de modèles', 'Fine-tuning BERT / CamemBERT', 'VGG16', 'MobileNet',
+      'Grid Search / Cross-Validation', 'PyTorch', 'Keras', 'CNN / RNN',
+      'Transfer Learning (VGG16, MobileNet)', 'Computer Vision & OCR',
     ],
   },
   {
     title: 'NLP & IA Générative',
-    color: 'fuchsia',
     skills: [
       'Analyse sémantique', 'Classification de texte', "Extraction d'entités",
-      'Embeddings', 'Transformers', 'LLMs & Prompt Engineering', 'RAG', 'Bases vectorielles',
+      'Embeddings', 'Transformers', 'Hugging Face', 'Fine-tuning BERT / CamemBERT',
+      'LLMs (Mistral, Llama)', 'Prompt Engineering', 'RAG', 'LangChain',
+      'Bases vectorielles (ChromaDB)',
     ],
   },
   {
     title: 'Analyse statistique & Data',
-    color: 'pink',
     skills: [
       'Analyse exploratoire (EDA)', 'Tests statistiques', 'Validation croisée',
       'Gestion du déséquilibre des classes', 'Feature engineering', 'Cycle de la donnée',
@@ -25,23 +25,21 @@ export const skillCategories = [
   },
   {
     title: 'Data Engineering & Qualité',
-    color: 'indigo',
     skills: [
       'Architecture de pipelines data/IA', 'Tests unitaires (pytest)', 'Docker',
-      'Flask', 'Dash (Plotly)', 'APIs & dashboards', 'Web Scraping (BeautifulSoup, Scrapy)',
+      'Flask', 'FastAPI', 'Streamlit', 'Dash (Plotly)', 'APIs & dashboards',
+      'Web Scraping (BeautifulSoup, Scrapy)', 'OpenDataSoft',
     ],
   },
   {
     title: 'Programmation & Bases de données',
-    color: 'blue',
     skills: [
-      'Python (NumPy, Pandas, Scikit-learn)', 'SQL avancé', 'MySQL', 'PostgreSQL',
-      'SQLite', 'C', 'VHDL', 'MATLAB',
+      'Python (NumPy, Pandas, Scikit-learn)', 'Jupyter', 'SQL avancé', 'MySQL',
+      'PostgreSQL', 'SQLite', 'C', 'VHDL', 'MATLAB',
     ],
   },
   {
     title: 'Visualisation & Data Storytelling',
-    color: 'purple',
     skills: [
       'Matplotlib', 'Seaborn', 'Plotly / Dash', 'Dashboards interactifs',
       'Vulgarisation pour les métiers',
@@ -49,7 +47,6 @@ export const skillCategories = [
   },
   {
     title: 'Outils & Méthodologie',
-    color: 'rose',
     skills: [
       'Git / GitHub', 'Jira', 'Agile / Scrum', 'Travail pluridisciplinaire',
       'Excel', 'PowerPoint',

@@ -1,15 +1,16 @@
+import { ArrowDown } from 'lucide-react'
 import { profile } from '../data/profile'
 import Container from './Container'
 import SectionHeading from './SectionHeading'
 
-// Une couleur par domaine de compétence (voir topSkillGroups dans profile.js).
+// Couleur du texte par groupe et taille par importance.
 // Classes écrites en toutes lettres pour le scanner Tailwind.
-const pillStyles = {
-  blue: 'border-blue-200 bg-blue-50 text-blue-700',
-  indigo: 'border-indigo-200 bg-indigo-50 text-indigo-700',
-  sky: 'border-sky-200 bg-sky-50 text-sky-700',
-  cyan: 'border-cyan-200 bg-cyan-50 text-cyan-700',
-  teal: 'border-teal-200 bg-teal-50 text-teal-700',
+const textStyles = {
+  blue: 'text-blue-600',
+  indigo: 'text-indigo-600',
+  sky: 'text-sky-600',
+  cyan: 'text-cyan-600',
+  teal: 'text-teal-600',
 }
 
 const dotStyles = {
@@ -20,7 +21,16 @@ const dotStyles = {
   teal: 'bg-teal-500',
 }
 
+const sizeStyles = {
+  3: 'text-2xl font-bold',
+  2: 'text-lg font-semibold',
+  1: 'text-sm font-medium',
+}
+
 export default function About() {
+  const { groups, words } = profile.skillCloud
+  const colorOf = (groupId) => groups.find((g) => g.id === groupId).color
+
   return (
     <section id="about" className="border-t border-zinc-100 py-20">
       <Container>
@@ -29,30 +39,33 @@ export default function About() {
           <p className="text-lg leading-relaxed text-zinc-600">{profile.bio}</p>
 
           <div>
-            <p className="mb-4 text-sm font-semibold text-navy">
-              Ce sur quoi je travaille au quotidien :
-            </p>
-            <div className="flex flex-wrap gap-2.5">
-              {profile.topSkillGroups.flatMap((group) =>
-                group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-transform hover:-translate-y-0.5 ${pillStyles[group.color]}`}
-                  >
-                    {skill}
-                  </span>
-                ))
-              )}
+            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1.5">
+              {words.map((word) => (
+                <span
+                  key={word.label}
+                  className={`${sizeStyles[word.size]} ${textStyles[colorOf(word.group)]} transition-opacity hover:opacity-60`}
+                >
+                  {word.label}
+                </span>
+              ))}
             </div>
 
             <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1.5">
-              {profile.topSkillGroups.map((group) => (
-                <span key={group.name} className="flex items-center gap-1.5 text-xs text-zinc-500">
+              {groups.map((group) => (
+                <span key={group.id} className="flex items-center gap-1.5 text-xs text-zinc-500">
                   <span className={`h-2 w-2 rounded-full ${dotStyles[group.color]}`} />
                   {group.name}
                 </span>
               ))}
             </div>
+
+            <a
+              href="#skills"
+              className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-dark"
+            >
+              Voir toutes mes compétences
+              <ArrowDown size={15} />
+            </a>
           </div>
         </div>
       </Container>
