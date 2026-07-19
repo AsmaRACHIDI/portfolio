@@ -22,8 +22,8 @@ const dotStyles = {
 }
 
 const sizeStyles = {
-  3: 'text-2xl font-bold',
-  2: 'text-lg font-semibold',
+  3: 'text-3xl font-bold',
+  2: 'text-xl font-semibold',
   1: 'text-sm font-medium',
 }
 
@@ -40,7 +40,7 @@ export default function About() {
           <p className="text-lg leading-relaxed text-zinc-600">{profile.bio}</p>
 
           <div className="text-center">
-            <div className="mx-auto max-w-lg space-y-0.5">
+            <div className="mx-auto max-w-xl">
               {rows.map((row, r) => (
                 <div key={r} className="flex flex-wrap items-baseline justify-center gap-x-4">
                   {row.map((word) => {
