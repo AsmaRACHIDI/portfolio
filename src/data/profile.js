@@ -18,22 +18,31 @@ export const profile = {
     {
       name: 'Deep Learning & Vision',
       color: 'indigo',
-      skills: ['Deep Learning', 'Computer Vision'],
+      skills: [
+        'Deep Learning', 'Computer Vision', 'PyTorch', 'Keras',
+        'CNN', 'RNN', 'OCR', 'Transfer Learning',
+      ],
     },
     {
       name: 'NLP & IA générative',
       color: 'sky',
-      skills: ['NLP', 'LLM', 'RAG', 'BERT & CamemBERT'],
+      skills: [
+        'NLP', 'LLM', 'RAG', 'BERT & CamemBERT', 'Hugging Face',
+        'LangChain', 'Mistral', 'Llama', 'ChromaDB',
+      ],
     },
     {
       name: 'Data & analyse',
       color: 'cyan',
-      skills: ['Python', 'SQL', 'EDA'],
+      skills: [
+        'Python', 'SQL', 'EDA', 'PostgreSQL', 'MySQL',
+        'Web Scraping', 'Matplotlib / Seaborn',
+      ],
     },
     {
       name: 'Outils & cloud',
       color: 'teal',
-      skills: ['Docker', 'Azure', 'Dash / Plotly'],
+      skills: ['Docker', 'Azure', 'Dash / Plotly', 'Flask', 'GitHub', 'pytest'],
     },
   ],
 }
