@@ -1,70 +1,51 @@
-import { motion } from 'framer-motion'
-import { GraduationCap, Award } from 'lucide-react'
+import { Award } from 'lucide-react'
 import { education, certifications } from '../data/education'
 import Container from './Container'
 import SectionHeading from './SectionHeading'
 
 export default function Education() {
   return (
-    <section id="education" className="py-24">
+    <section id="education" className="border-t border-zinc-100 py-20">
       <Container>
-        <SectionHeading
-          eyebrow="Formation"
-          title="Diplômes & certifications"
-        />
+        <SectionHeading title="Formation" />
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {education.map((edu, i) => (
-            <motion.div
+        <div className="grid gap-5 md:grid-cols-3">
+          {education.map((edu) => (
+            <div
               key={edu.school + edu.period}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col rounded-2xl border border-zinc-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="rounded-xl border border-zinc-200 p-6"
             >
-              <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white">
-                <GraduationCap size={20} />
-              </span>
-              <span className="text-sm font-semibold text-violet-600">{edu.period}</span>
-              <h3 className="mt-1 text-lg font-bold text-zinc-900">{edu.degree}</h3>
+              <p className="text-sm font-medium text-violet-700">{edu.period}</p>
+              <h3 className="mt-1.5 font-semibold text-zinc-900">{edu.degree}</h3>
               <p className="mt-1 text-sm text-zinc-500">{edu.school}</p>
               {edu.details.length > 0 && (
                 <ul className="mt-4 space-y-1.5">
                   {edu.details.map((d) => (
                     <li key={d} className="flex gap-2 text-sm text-zinc-600">
-                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-violet-400" />
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-zinc-400" />
                       {d}
                     </li>
                   ))}
                 </ul>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5 }}
-          className="mt-8 flex flex-col items-center gap-4 rounded-2xl bg-gradient-to-r from-violet-50 via-indigo-50 to-pink-50 p-6 sm:flex-row sm:justify-center"
-        >
+        <div className="mt-6 flex flex-wrap gap-4">
           {certifications.map((cert) => (
             <div
               key={cert.code}
-              className="flex items-center gap-3 rounded-xl bg-white px-5 py-3 shadow-sm"
+              className="flex items-center gap-3 rounded-xl border border-zinc-200 px-5 py-3"
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-pink-500 to-violet-600 text-white">
-                <Award size={16} />
-              </span>
-              <div className="text-left">
-                <div className="text-sm font-bold text-zinc-900">{cert.code}</div>
-                <div className="text-xs text-zinc-500">{cert.name} · {cert.year}</div>
+              <Award size={18} className="text-violet-700" />
+              <div>
+                <p className="text-sm font-semibold text-zinc-900">{cert.code}</p>
+                <p className="text-xs text-zinc-500">{cert.name} · {cert.year}</p>
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </Container>
     </section>
   )

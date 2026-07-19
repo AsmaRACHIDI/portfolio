@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Mail, Copy, Check } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from './BrandIcons'
 import { profile } from '../data/profile'
@@ -23,64 +22,55 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="border-t border-zinc-100 py-20">
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-violet-600 via-indigo-600 to-pink-500 px-6 py-16 text-center shadow-xl sm:px-12"
-        >
-          <div className="pointer-events-none absolute -left-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-20 -right-10 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
-
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">Discutons de votre prochain projet data</h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-violet-100">
-            Ouverte aux opportunités en Data Science, Machine Learning et NLP. N'hésitez pas à me contacter.
+        <div className="max-w-2xl">
+          <h2 className="text-2xl font-bold text-zinc-900 sm:text-3xl">Contact</h2>
+          <p className="mt-3 text-lg text-zinc-600">
+            Ouverte aux opportunités en Data Science, Machine Learning et NLP.
+            N'hésitez pas à me contacter, je réponds rapidement.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href={gmailComposeUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 rounded-full bg-white px-7 py-3 font-semibold text-violet-700 shadow-lg transition-transform hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-lg bg-violet-700 px-5 py-2.5 font-medium text-white hover:bg-violet-800"
             >
-              <Mail size={18} />
+              <Mail size={16} />
               Écrire un email
             </a>
-
             <button
               onClick={copyEmail}
-              className="flex items-center gap-2 rounded-full border border-white/40 px-7 py-3 font-semibold text-white transition-colors hover:bg-white/10"
+              className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 px-5 py-2.5 font-medium text-zinc-700 hover:border-zinc-400"
             >
-              {copied ? <Check size={18} /> : <Copy size={18} />}
+              {copied ? <Check size={16} className="text-emerald-600" /> : <Copy size={16} />}
               {copied ? 'Email copié !' : profile.email}
             </button>
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-6">
+          <div className="mt-8 flex items-center gap-4">
             <a
               href={profile.github}
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
-              className="text-violet-100 transition-colors hover:text-white"
+              className="text-zinc-500 hover:text-zinc-900"
             >
-              <GithubIcon size={24} />
+              <GithubIcon size={20} />
             </a>
             <a
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className="text-violet-100 transition-colors hover:text-white"
+              className="text-zinc-500 hover:text-zinc-900"
             >
-              <LinkedinIcon size={24} />
+              <LinkedinIcon size={20} />
             </a>
           </div>
-        </motion.div>
+        </div>
       </Container>
     </section>
   )

@@ -1,14 +1,6 @@
 export const profile = {
   name: 'Asma Rachidi',
-  initials: 'AR',
   title: 'Data Scientist | ML & NLP',
-  roles: [
-    'Machine Learning',
-    'NLP & IA Générative',
-    'Computer Vision',
-    'RAG & LLM',
-    'Data Visualisation',
-  ],
   location: 'France',
   email: 'rachidi.asm@gmail.com',
   github: 'https://github.com/AsmaRACHIDI',
