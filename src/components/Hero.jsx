@@ -21,15 +21,10 @@ export default function Hero() {
           </p>
 
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-            Asma Rachidi
+            Asma RACHIDI
           </h1>
           <p className="mt-3 text-xl font-medium text-sky-300">
             Data Scientist — Machine Learning & NLP
-          </p>
-
-          <p className="mt-6 text-lg leading-relaxed text-slate-300">
-            J'analyse, structure et modélise des données complexes pour en extraire
-            des insights à forte valeur ajoutée. 3 ans d'expérience en open data et en santé.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">

@@ -1,6 +1,6 @@
-# Portfolio — Asma Rachidi
+# Portfolio — Asma RACHIDI
 
-Portfolio de Data Scientist construit avec React, Vite, Tailwind CSS et Framer Motion.
+Portfolio de Data Scientist construit avec React, Vite et Tailwind CSS.
 
 ## Démarrer en local
 

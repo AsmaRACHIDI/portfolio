@@ -1,5 +1,5 @@
 export const profile = {
-  name: 'Asma Rachidi',
+  name: 'Asma RACHIDI',
   title: 'Data Scientist | ML & NLP',
   location: 'France',
   email: 'rachidi.asm@gmail.com',

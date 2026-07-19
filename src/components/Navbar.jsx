@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 bg-navy">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a href="#top" className="font-bold text-white">
-          Asma Rachidi
+          Asma RACHIDI
         </a>
 
         <div className="hidden items-center gap-7 md:flex">
