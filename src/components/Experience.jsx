@@ -6,7 +6,7 @@ export default function Experience() {
   return (
     <section id="experience" className="border-t border-zinc-100 bg-slate-50 py-20">
       <Container>
-        <SectionHeading title="Expérience professionnelle" />
+        <SectionHeading title="Expériences professionnelles" />
 
         <div className="space-y-8">
           {experiences.map((exp) => (
