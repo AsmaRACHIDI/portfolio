@@ -15,7 +15,7 @@ export default function Hero() {
       />
       <Container className="relative">
         <div className="max-w-3xl">
-          <p className="mb-4 flex items-center gap-2 text-sm text-slate-300">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-4 py-1.5 text-sm text-slate-200">
             <span className="h-2 w-2 rounded-full bg-emerald-400" />
             Disponible pour de nouvelles opportunités
           </p>
