@@ -25,7 +25,7 @@ export default function Projects() {
               onClick={() => setActiveId(cat.id)}
               className={`rounded-lg px-4 py-2 text-sm font-medium ${
                 cat.id === activeId
-                  ? 'bg-zinc-900 text-white'
+                  ? 'bg-navy text-white'
                   : 'border border-zinc-200 text-zinc-600 hover:border-zinc-300'
               }`}
             >
@@ -47,7 +47,7 @@ export default function Projects() {
               }`}
             >
               <div className="mb-3 flex items-center justify-between">
-                <span className="rounded-md bg-violet-50 px-2.5 py-1 text-xs font-medium text-violet-700">
+                <span className="rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-primary">
                   {project.tag}
                 </span>
                 {project.comingSoon && (
@@ -107,7 +107,7 @@ export default function Projects() {
             href={profile.github}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-violet-700 hover:text-violet-900"
+            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-dark"
           >
             <GithubIcon size={16} />
             Voir tous mes projets sur GitHub →

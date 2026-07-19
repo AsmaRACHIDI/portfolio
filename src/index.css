@@ -3,6 +3,12 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* Palette : marine (header/hero) + bleu Bootstrap (accent) */
+  --color-navy: #1b2a4e;
+  --color-navy-light: #253a6b;
+  --color-primary: #0d6efd;
+  --color-primary-dark: #0b5ed7;
 }
 
 html {
@@ -12,5 +18,5 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: #ffffff;
-  color: #18181b;
+  color: #212529;
 }

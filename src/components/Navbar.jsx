@@ -15,9 +15,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-zinc-100 bg-white/95 backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-50 bg-navy">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#top" className="font-bold text-zinc-900">
+        <a href="#top" className="font-bold text-white">
           Asma Rachidi
         </a>
 
@@ -26,18 +26,18 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-zinc-600 hover:text-zinc-900"
+              className="text-sm text-slate-300 hover:text-white"
             >
               {link.label}
             </a>
           ))}
-          <span className="h-4 w-px bg-zinc-200" />
+          <span className="h-4 w-px bg-white/20" />
           <a
             href={profile.github}
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
-            className="text-zinc-500 hover:text-zinc-900"
+            className="text-slate-300 hover:text-white"
           >
             <GithubIcon size={18} />
           </a>
@@ -46,14 +46,14 @@ export default function Navbar() {
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"
-            className="text-zinc-500 hover:text-zinc-900"
+            className="text-slate-300 hover:text-white"
           >
             <LinkedinIcon size={18} />
           </a>
         </div>
 
         <button
-          className="text-zinc-700 md:hidden"
+          className="text-white md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Ouvrir le menu"
         >
@@ -62,23 +62,23 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-zinc-100 bg-white md:hidden">
+        <div className="border-t border-white/10 bg-navy md:hidden">
           <div className="flex flex-col px-6 py-3">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="py-2.5 text-zinc-700 hover:text-zinc-900"
+                className="py-2.5 text-slate-200 hover:text-white"
               >
                 {link.label}
               </a>
             ))}
-            <div className="mt-2 flex items-center gap-4 border-t border-zinc-100 py-3">
-              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="text-zinc-500">
+            <div className="mt-2 flex items-center gap-4 border-t border-white/10 py-3">
+              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="text-slate-300">
                 <GithubIcon size={20} />
               </a>
-              <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-zinc-500">
+              <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-slate-300">
                 <LinkedinIcon size={20} />
               </a>
             </div>

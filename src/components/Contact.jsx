@@ -25,7 +25,7 @@ export default function Contact() {
     <section id="contact" className="border-t border-zinc-100 py-20">
       <Container>
         <div className="max-w-2xl">
-          <h2 className="text-2xl font-bold text-zinc-900 sm:text-3xl">Contact</h2>
+          <h2 className="text-2xl font-bold text-navy sm:text-3xl">Contact</h2>
           <p className="mt-3 text-lg text-zinc-600">
             Ouverte aux opportunités en Data Science, Machine Learning et NLP.
             N'hésitez pas à me contacter, je réponds rapidement.
@@ -36,7 +36,7 @@ export default function Contact() {
               href={gmailComposeUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-violet-700 px-5 py-2.5 font-medium text-white hover:bg-violet-800"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 font-medium text-white hover:bg-primary-dark"
             >
               <Mail size={16} />
               Écrire un email

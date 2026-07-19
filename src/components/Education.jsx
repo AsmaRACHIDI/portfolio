@@ -15,7 +15,7 @@ export default function Education() {
               key={edu.school + edu.period}
               className="rounded-xl border border-zinc-200 p-6"
             >
-              <p className="text-sm font-medium text-violet-700">{edu.period}</p>
+              <p className="text-sm font-medium text-primary">{edu.period}</p>
               <h3 className="mt-1.5 font-semibold text-zinc-900">{edu.degree}</h3>
               <p className="mt-1 text-sm text-zinc-500">{edu.school}</p>
               {edu.details.length > 0 && (
@@ -38,7 +38,7 @@ export default function Education() {
               key={cert.code}
               className="flex items-center gap-3 rounded-xl border border-zinc-200 px-5 py-3"
             >
-              <Award size={18} className="text-violet-700" />
+              <Award size={18} className="text-primary" />
               <div>
                 <p className="text-sm font-semibold text-zinc-900">{cert.code}</p>
                 <p className="text-xs text-zinc-500">{cert.name} · {cert.year}</p>

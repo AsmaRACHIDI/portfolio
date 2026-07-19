@@ -4,7 +4,7 @@ import SectionHeading from './SectionHeading'
 
 export default function Experience() {
   return (
-    <section id="experience" className="border-t border-zinc-100 bg-zinc-50/50 py-20">
+    <section id="experience" className="border-t border-zinc-100 bg-slate-50 py-20">
       <Container>
         <SectionHeading title="Expérience professionnelle" />
 
