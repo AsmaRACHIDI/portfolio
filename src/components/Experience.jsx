@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { Briefcase } from 'lucide-react'
 import { experiences } from '../data/experience'
 import Container from './Container'
 import SectionHeading from './SectionHeading'
@@ -27,8 +26,8 @@ export default function Experience() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="relative pl-16 sm:pl-20"
               >
-                <span className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 to-pink-500 text-white shadow-md sm:h-12 sm:w-12">
-                  <Briefcase size={18} />
+                <span className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-zinc-100 bg-white p-1.5 shadow-md sm:h-12 sm:w-12">
+                  <img src={exp.logo} alt={`Logo ${exp.company}`} className="h-full w-full object-contain" />
                 </span>
 
                 <div className="rounded-2xl border border-zinc-100 bg-white p-6 shadow-sm">

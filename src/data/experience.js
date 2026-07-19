@@ -1,8 +1,12 @@
+import ministereLogo from '../assets/logos/ministere-economie.svg'
+import lip6Logo from '../assets/logos/lip6.png'
+
 export const experiences = [
   {
     title: 'Data Scientist en Open Data',
     company: 'Ministère de l\'Économie, des Finances et de la Souveraineté industrielle et numérique',
     subCompany: 'SNUM - BercyHub',
+    logo: ministereLogo,
     period: '2023 — 2025',
     points: [
       "Administration des plateformes open data : gestion et administration de data.economie.gouv.fr et data.gouv.fr favorisant la transparence et l'accès aux données publiques.",
@@ -19,6 +23,7 @@ export const experiences = [
     title: 'Data Scientist Stagiaire',
     company: 'LIP6 — Laboratoire d\'Informatique de Paris 6',
     subCompany: 'Sorbonne Université',
+    logo: lip6Logo,
     period: '2021 · 6 mois',
     points: [
       "Objectif : développement d'une nouvelle génération de vidéo capsule endoscopique pour la détection d'anomalies dans le tube digestif.",
