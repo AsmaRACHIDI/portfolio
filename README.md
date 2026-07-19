@@ -42,9 +42,9 @@ Dans `src/data/projects.js`, chaque catégorie a un tableau `projects`. Remplace
 Le projet est prêt pour GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`) :
 
 1. Créez un dépôt GitHub nommé `portfolio` (ou changez `base` dans `vite.config.js` pour qu'il corresponde au nom réel du dépôt, ex. `/mon-repo/`).
-2. Poussez le code sur la branche `main`.
+2. Poussez le code sur la branche `master`.
 3. Dans les paramètres du dépôt GitHub → **Pages**, choisissez la source **GitHub Actions**.
-4. Chaque push sur `main` reconstruit et republie automatiquement le site.
+4. Chaque push sur `master` reconstruit et republie automatiquement le site.
 
 Le site sera accessible à `https://<votre-utilisateur>.github.io/portfolio/`.
 
