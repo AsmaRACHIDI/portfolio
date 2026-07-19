@@ -1,15 +1,25 @@
 import { motion } from 'framer-motion'
-import { Landmark, HeartPulse, BrainCircuit, Cloud } from 'lucide-react'
 import { profile } from '../data/profile'
 import Container from './Container'
 import SectionHeading from './SectionHeading'
 
-const iconMap = {
-  Landmark,
-  HeartPulse,
-  BrainCircuit,
-  Cloud,
-}
+// Classes écrites en toutes lettres pour que le scanner Tailwind les détecte.
+const badgeStyles = [
+  'bg-violet-100 text-violet-700',
+  'bg-fuchsia-100 text-fuchsia-700',
+  'bg-indigo-100 text-indigo-700',
+  'bg-pink-100 text-pink-700',
+  'bg-blue-100 text-blue-700',
+  'bg-purple-100 text-purple-700',
+]
+
+const sizeStyles = [
+  'text-sm px-4 py-2',
+  'text-base px-5 py-2.5 font-semibold',
+  'text-sm px-4 py-2',
+]
+
+const verticalOffsets = ['translate-y-0', 'translate-y-3', '-translate-y-2', 'translate-y-1']
 
 export default function About() {
   return (
@@ -37,22 +47,20 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6 }}
-            className="divide-y divide-zinc-100 overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-sm lg:col-span-2"
+            className="flex flex-wrap items-center justify-center gap-3 lg:col-span-2 lg:justify-start"
           >
-            {profile.highlights.map((item) => {
-              const Icon = iconMap[item.icon]
-              return (
-                <div key={item.title} className="flex items-center gap-4 p-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-pink-500 text-white">
-                    <Icon size={20} />
-                  </span>
-                  <div className="text-left">
-                    <div className="font-semibold text-zinc-900">{item.title}</div>
-                    <div className="text-sm text-zinc-500">{item.subtitle}</div>
-                  </div>
-                </div>
-              )
-            })}
+            {profile.topSkills.map((skill, i) => (
+              <span
+                key={skill}
+                className={`animate-float inline-block rounded-full font-medium shadow-sm ${verticalOffsets[i % verticalOffsets.length]} ${sizeStyles[i % sizeStyles.length]} ${badgeStyles[i % badgeStyles.length]}`}
+                style={{
+                  animationDelay: `${(i % 5) * 0.35}s`,
+                  animationDuration: `${3.2 + (i % 3) * 0.5}s`,
+                }}
+              >
+                {skill}
+              </span>
+            ))}
           </motion.div>
         </div>
       </Container>
