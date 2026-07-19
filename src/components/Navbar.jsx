@@ -4,7 +4,7 @@ import { GithubIcon, LinkedinIcon } from './BrandIcons'
 import { profile } from '../data/profile'
 
 const links = [
-  { href: '#about', label: 'À propos' },
+  { href: '#about', label: 'À propos de moi' },
   { href: '#experience', label: 'Expérience' },
   { href: '#skills', label: 'Compétences' },
   { href: '#projects', label: 'Projets' },
