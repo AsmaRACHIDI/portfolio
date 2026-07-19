@@ -35,7 +35,7 @@ export default function About() {
   return (
     <section id="about" className="border-t border-zinc-100 py-20">
       <Container>
-        <SectionHeading title="À propos" />
+        <SectionHeading title="À propos de moi" />
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <p className="text-lg leading-relaxed text-zinc-600">{profile.bio}</p>
 

@@ -31,7 +31,7 @@ export const profile = {
         { label: 'SQL', group: 'data', size: 2 },
       ],
       [
-        { label: 'BERT & CamemBERT', group: 'nlp', size: 2 },
+        { label: 'Clustering', group: 'ml', size: 1 },
         { label: 'Machine Learning', group: 'ml', size: 3 },
       ],
       [
@@ -45,16 +45,16 @@ export const profile = {
         { label: 'Docker', group: 'tools', size: 2 },
       ],
       [
+        { label: 'BERT & CamemBERT', group: 'nlp', size: 2 },
         { label: 'Scikit-learn', group: 'ml', size: 2 },
+      ],
+      [
         { label: 'Hugging Face', group: 'nlp', size: 1 },
         { label: 'Pandas / NumPy', group: 'data', size: 1 },
-      ],
-      [
         { label: 'Azure', group: 'tools', size: 1 },
-        { label: 'Clustering', group: 'ml', size: 1 },
-        { label: 'Dash / Plotly', group: 'tools', size: 1 },
       ],
       [
+        { label: 'Dash / Plotly', group: 'tools', size: 1 },
         { label: 'LangChain', group: 'nlp', size: 1 },
       ],
     ],
